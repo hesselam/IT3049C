@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <h1>Rock, Paper, Scissors</h1>
+    <h3>Welcome to Rock, Paper, Scissors! In order to play, please select your move and press "shoot":</h3>
+   
+    <form>
+        <select id="mySelect">
+            <option>Rock</option>
+            <option>Scissors</option>
+            <option>Paper</option>
+        </select>
+        <br><br>
+        <input type="button" value="Shoot" onclick="myGame()">
+    </form>
+    
+    <br>
+    <div id="message1" >
+        
+    </div>
+    
+    <script>
+    function myGame() {
+        var myplay = document.getElementById("mySelect").selectedIndex;
+        var comnum = Math.floor(Math.random()*3);
+        var comhand;
+        var judge;
+
+        if(comnum == 0) {
+            comhand = "Rock";
+        } else if(comnum == 1) {
+            comhand = "Scissors";
+        } else if(comnum == 2) {
+            comhand = "Paper";
+        }
+
+        if(myplay == 0 && comnum == 1) {
+            judge = "you win";
+        } else if(myplay == 1 && comnum == 2) {
+            judge = "you win";
+        } else if(myplay == 2 && comnum == 0) {
+            judge = "you win";
+        } else if(myplay == comnum) {
+            judge = "it's a draw";
+        } else {
+            judge = "you lose";
+        }
+
+        
+        var paragraph = document.getElementById("message1");
+
+       paragraph.innerHTML += "This Round: The computer played " + comhand + " so " + judge + "!" + "<br/><br/>";
+   
+        
+    }
+    </script>
+</body>
+</html>
