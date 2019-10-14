@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	flex-wrap: wrap;
+}
+
+li {
+	width: 15px;
+
+}

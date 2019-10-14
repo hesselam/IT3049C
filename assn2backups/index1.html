@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Rock, Paper, Scissors</title>
+
+    <style>
+       *{margin:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}::selection{background:#fb9fe5;text-shadow:none}a{color:#0088CC;text-decoration:none;outline:0}a:hover{color:#005580}a img{border:none}img{max-width:100%}html{font-size:100%}body{padding:5%;font:300 1.25em/1.6 monospace;background:#fff;color:#000;}h1{font-family:"Helvetica Neue",sans-serif;line-height:1;font-weight:300;margin-bottom:1em;}.game{padding:2em;background:#eee;}
+    </style>
+</head>
+<body>
+
+<h1>Rock, Paper, Scissors</h1>
+    
+<p> Welcome to Rock, Paper, Scissors! In order to play, please select your move and press "shoot":</p>
+<br>
+    
+<form>
+<select id="mySelect">
+  <option>Rock</option>
+  <option>Paper</option>
+  <option>Scissors</option>
+</select>
+<br>
+<input type="button" value="Shoot" onclick="myGame()">
+</form>  
+    
+    
+<!--<form>
+        <select id="janken">
+            <option>Rock</option>
+            <option>scissors</option>
+            <option>paper</option>
+        </select>
+        <input type="button" value="battle" onclick="myGame()">
+    </form>   --> 
+    
+    
+
+
+
+    <script>
+        
+        function myGame() {
+        var myplay = document.getElementById("mySelect").selectedIndex;
+        var comnum = Math.floor(Math.random()*3);
+        var cpuhand;
+        var judge;
+
+        if(comnum == 0) {
+            cpuhand = "Rock";
+        } else if(comnum == 1) {
+            cpuhand = "scissors";
+        } else if(comnum == 2) {
+            cpuhand = "paper";
+        }
+
+        if(myplay == 0 && comnum == 1) {
+            judge = "you win";
+        } else if(myplay == 1 && comnum == 2) {
+            judge = "you win";
+        } else if(myplay == 2 && comnum == 0) {
+            judge = "you win";
+        } else if(myplay == comnum) {
+            judge = "draw";
+        } else {
+            judge = "you lose";
+        }
+
+        document.getElementById("message1").innerHTML = "<h3> Com: " + cpuhand + "</h3>";
+        document.getElementById("message2").innerHTML = "<h3> You: " + judge + "</h3>";
+    }
+        
+        
+        
+    </script>
+
+
+
+</body>
+</html>
