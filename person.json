@@ -1,0 +1,9 @@
+{
+    "name": "Adam",
+    "isStudent" : true,
+    "course" : [
+    {
+    "name" : "IT 3049C - Web Game Development"
+    }
+    ]
+}
