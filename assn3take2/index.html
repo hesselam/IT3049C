@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Assignment 3: Hangman</title>
+
+    <link rel="stylesheet" href="hangman.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>Hangman! The Game</header>
+
+        <div id="welcomeScreen">
+            Select difficulty to begin:
+            <button id="easyButton">Easy</button>
+            <button id="mediumButton">Medium</button>
+            <button id="hardButton">Hard</button>
+        </div>
+        <div id="gameScreen" class="hidden">
+            Let's play Hangman!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            
+            <button id="displayHiddenWordButton">Display Hidden Word</button>
+            <br><br>
+            <canvas id="hangmanCanvas" width="475" height="475"></canvas><br>
+            <label id="wordLabel"></label>
+            <br>
+            <div id="afterDisplay" class="hidden">
+            <form id="userInput">
+                Guess: <input type="text" id="input">
+                <input type="submit" value="Submit Guess">
+            </form>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br><br>
+            Previously Guessed Letters:<br><br>
+            <textarea id="guessedLetters" rows="8" cols="100"></textarea>
+            </div>
+            <div id="outcomeDisplay" class="hidden">
+                <label id="outcomeLabel"></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button id="playAgainButton">Do you want to play again?</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
