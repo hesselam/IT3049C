@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Guess the Number!</title>
+    </head>
+    <div id="newgamemodal" class="modal" hidden>
+            <div class="modal-content">
+                <h1 class="flash">Guess the Number!</h1><br>
+                
+                <h4>Here's how to play: </h4>
+                <br>
+                <h5>Guess which number between 1 and 15 we've picked.
+                <br>
+                <br>
+                Try to figure out the number in as few guesses as possible.</h5>
+                <button type="button" onclick="hidemodal()">OK</button>
+                <br>
+                <img src="number.png" width="200" height="200" alt="numbers"/>
+            </div>
+    </div>
+    <body>
+        <div class="app">
+            <h1>Select a number and press enter:</h1>
+            <h5></h5>
+            <div>
+                <select id="numberselect"class="button-large">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+                <button onclick="guessbtn()"class="button-large">Enter</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
